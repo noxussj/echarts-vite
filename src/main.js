@@ -1,6 +1,6 @@
 import { createApp } from 'vue';
 import dom from './app.vue';
-let app = createApp(dom);
+const app = createApp(dom);
 
 /**
  * 导入静态资源
@@ -16,6 +16,13 @@ import elementPlus from './libs/import/element-plus.js';
 elementPlus(app);
 
 /**
- * 挂载到dom
+ * 导入插件
  */
-app.mount('#root');
+import Router from './router/index.js';
+
+let router = Router(app);
+
+/**
+ * 完成路由后挂载到dom
+ */
+router.isReady().then(() => app.mount('#root'));
