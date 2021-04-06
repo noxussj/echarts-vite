@@ -18,9 +18,13 @@ elementPlus(app);
 /**
  * 导入插件
  */
-import Router from './router/index.js';
+import router from './router/index.js';
 
-let router = Router(app);
+app.use(router);
+
+import store from './store/index.js';
+
+app.use(store);
 
 /**
  * 完成路由后挂载到dom

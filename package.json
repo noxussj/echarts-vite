@@ -1,20 +1,21 @@
 {
-    "name": "echarts-vite",
-    "version": "0.0.0",
-    "scripts": {
-        "dev": "vite",
-        "build": "vite build --base=./"
-    },
-    "dependencies": {
-        "noxussj-ajax": "^1.0.1",
-        "vite-plugin-imp": "^2.0.4",
-        "@vitejs/plugin-vue": "^1.0.4",
-        "@vue/compiler-sfc": "^3.0.5",
-        "vite": "^2.0.0-beta.12"
-    },
-    "devDependencies": {
-        "vue": "^3.0.5",
-        "vue-router": "^4.0.5",
-        "element-plus": "^1.0.2-beta.35"
-    }
+  "name": "echarts-vite",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build --base=./"
+  },
+  "dependencies": {
+    "@vitejs/plugin-vue": "^1.0.4",
+    "@vue/compiler-sfc": "^3.0.5",
+    "noxussj-ajax": "^1.0.1",
+    "vite": "^2.0.0-beta.12",
+    "vite-plugin-imp": "^2.0.4",
+    "vuex": "^4.0.0"
+  },
+  "devDependencies": {
+    "vue": "^3.0.5",
+    "vue-router": "^4.0.5",
+    "element-plus": "^1.0.2-beta.35"
+  }
 }
