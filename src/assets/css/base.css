@@ -1,0 +1,19 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+}
+
+body #root {
+    height: 100%;
+}
+
+.dg.main.a {
+    position: absolute;
+    float: none;
+    top: 15px;
+    right: 15px;
+    margin-right: 0;
+}

@@ -1,0 +1,9 @@
+{
+    "printWidth": 170,
+    "eslintIntegration": true,
+    "stylelintIntegration": true,
+    "tabWidth": 4,
+    "semi": true,
+    "singleQuote": true,
+    "bracketSpacing": true
+}

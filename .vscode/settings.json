@@ -1,0 +1,45 @@
+{
+    // VSCODE 软件配置
+    "terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe",
+    "workbench.sideBar.location": "right",
+    "workbench.tree.indent": 16,
+    "git.enableSmartCommit": true,
+    "workbench.editor.enablePreview": false,
+    "search.followSymlinks": false,
+    "explorer.compactFolders": false,
+
+    // 使能每一种语言默认格式化规则
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[less]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[xml]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[vue]": {
+        "editor.defaultFormatter": "octref.vetur"
+    },
+
+    // vetur格式化配置
+    "vetur.format.options.tabSize": 4,
+    "vetur.format.defaultFormatter.html": "js-beautify-html",
+    "vetur.format.defaultFormatter.js": "prettier",
+    "vetur.format.defaultFormatter.less": "prettier",
+    "vetur.format.defaultFormatterOptions": {
+        "js-beautify-html": {
+            "wrap_line_length": 170,
+            "wrap_attributes": "auto"
+        }
+    }
+}
