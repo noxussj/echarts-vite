@@ -17,3 +17,7 @@ body #root {
     right: 15px;
     margin-right: 0;
 }
+
+.echarts-dom {
+    height: 100%;
+}

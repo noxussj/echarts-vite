@@ -8,6 +8,9 @@
   "dependencies": {
     "@vitejs/plugin-vue": "^1.0.4",
     "@vue/compiler-sfc": "^3.0.5",
+    "echarts": "^5.0.2",
+    "less": "^4.1.1",
+    "less-loader": "^8.0.0",
     "noxussj-ajax": "^1.0.1",
     "vite": "^2.0.0-beta.12",
     "vite-plugin-imp": "^2.0.4",
