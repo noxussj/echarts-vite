@@ -44,7 +44,7 @@ export default ({ dom, param, opt }) => {
             itemStyle: {
                 color: 'rgba(0, 0, 0, 0)',
                 emphasis: {
-                    color: color[index].replace(/(\d+)(\))/g, `${0.35}$2`),
+                    color: color[index].replace(/(\d+)(\))/g, `${0.3}$2`),
                 },
             },
         });

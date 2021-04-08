@@ -1,3 +1,5 @@
+import { toLowerCaseBar } from './libs/name-format.js';
+
 class Echarts {
     constructor(echarts) {
         this.echarts = echarts;
@@ -6,8 +8,28 @@ class Echarts {
     /**
      * 继承父级图表配置项
      */
-    async extens(name, param) {
-        let dispatch = () => import('./echarts/pie/pie-annular.js');
+    async extens(echartsName, param) {
+        let keys = ['pie', 'line'];
+
+        let key = '';
+
+        keys.map((item) => {
+            let reg = new RegExp(`^${item}`, 'g');
+
+            if (reg.test(echartsName)) {
+                key = item;
+            }
+        });
+
+        if (!key) {
+            console.error('提示', `该图表名称${echartsName}不存在`);
+
+            return false;
+        }
+
+        let name = toLowerCaseBar(echartsName);
+
+        let dispatch = () => import(`./echarts/${key}/${name}.js`);
 
         let component = (await dispatch()).default(param);
 

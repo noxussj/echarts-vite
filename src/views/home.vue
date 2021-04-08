@@ -2,18 +2,21 @@
     <div class="views__home">
 
         <div class="chart-panel">
-            <pie-annular></pie-annular>
+            <!-- <pie-annular></pie-annular> -->
 
+            <line-simple></line-simple>
         </div>
     </div>
 </template>
 
 <script>
 import PieAnnular from '../components/echarts/pie/pie-annular.vue';
+import LineSimple from '../components/echarts/line/line-simple.vue';
 
 export default {
     components: {
         PieAnnular,
+        LineSimple,
     },
     mounted() {},
 };
