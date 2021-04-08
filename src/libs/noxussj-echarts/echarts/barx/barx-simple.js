@@ -47,5 +47,7 @@ export default ({ dom, param, opt }) => {
     /**
      * 渲染
      */
-    let echarts = $echarts.render(dom, option);
+    let extensOption = $echarts.extens(opt, option);
+
+    let echarts = $echarts.render(dom, extensOption);
 };

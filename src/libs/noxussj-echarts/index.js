@@ -1,4 +1,5 @@
 import { toLowerCaseBar } from './libs/name-format.js';
+import EchartsExtens from './libs/echarts-extens.js';
 
 class Echarts {
     constructor(echarts) {
@@ -6,9 +7,18 @@ class Echarts {
     }
 
     /**
-     * 继承父级图表配置项
+     * 继承option
      */
-    async extens(echartsName, param) {
+    extens(FirstOBJ, SecondOBJ) {
+        let echartsExtens = new EchartsExtens();
+
+        return echartsExtens.extens(FirstOBJ, SecondOBJ);
+    }
+
+    /**
+     * 调用指定图表方法
+     */
+    async dispatch(echartsName, param) {
         let keys = ['pie', 'line', 'barx'];
 
         let key = '';

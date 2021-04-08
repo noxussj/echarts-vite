@@ -1,13 +1,16 @@
 <template>
     <div class="views__home">
+        <!-- <div class="chart-panel">
+            <pie-annular></pie-annular>
+        </div> -->
 
         <div class="chart-panel">
-            <!-- <pie-annular></pie-annular> -->
-
-            <!-- <line-simple></line-simple> -->
-
             <barx-simple></barx-simple>
         </div>
+
+        <!-- <div class="chart-panel">
+            <line-simple></line-simple>
+        </div> -->
     </div>
 </template>
 
@@ -32,6 +35,7 @@ export default {
     height: 500px;
 
     .chart-panel {
+        margin-bottom: 20px;
         padding: 10px;
         width: 590px;
         height: 355px;

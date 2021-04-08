@@ -13,7 +13,7 @@ export default {
             { value: 300, name: '视频广告' },
         ];
 
-        this.$echarts.extens('pieAnnular', {
+        this.$echarts.dispatch('pieAnnular', {
             dom: this.$refs.echart,
             param: {
                 data: data,

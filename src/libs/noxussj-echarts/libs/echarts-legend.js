@@ -7,7 +7,7 @@
  * @param {String} left 距离左侧
  * @param {Number} space 列间隔
  */
-const align = (param) => {
+let align = (param) => {
     // 数据定义
     let { data, isPercent, col, top, left, space } = param;
     let nameArr = data.map((item) => item.name); // 名称数组
@@ -37,10 +37,8 @@ const align = (param) => {
                     let percent = Number(((item[0].value / total) * 100).toFixed(2));
 
                     res = `${item[0].name} ${percent}%`;
-                }
-                else{
+                } else {
                     res = `${item[0].name}`;
-
                 }
             } else {
                 res = '　';
