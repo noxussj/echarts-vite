@@ -1,5 +1,6 @@
-import color from '../../libs/color.js';
 import { $echarts } from '../../index.js';
+import color from '../../libs/color.js';
+import legendTools from '../../libs/echarts-legend.js';
 
 export default ({ dom, param, opt }) => {
     let { data } = param;
@@ -10,9 +11,10 @@ export default ({ dom, param, opt }) => {
     let values = data.map((item) => item.value);
     let total = values.reduce((a, b) => a + b);
     let percentData = data.map((item) => {
-        item.value = Number(((item.value / total) * 100).toFixed(2));
-
-        return item;
+        return {
+            name: item.name,
+            value: Number(((item.value / total) * 100).toFixed(2)),
+        };
     });
 
     /**
@@ -42,11 +44,21 @@ export default ({ dom, param, opt }) => {
             itemStyle: {
                 color: 'rgba(0, 0, 0, 0)',
                 emphasis: {
-                    color: color[index].replace(/(\d+)(\))/g, `${0.5}$2`),
+                    color: color[index].replace(/(\d+)(\))/g, `${0.35}$2`),
                 },
             },
         });
     });
+
+    /**
+     * 统计展示文案
+     */
+    let centerData = [
+        {
+            name: '总数',
+            value: total,
+        },
+    ];
 
     /**
      * 添加分割线
@@ -73,24 +85,91 @@ export default ({ dom, param, opt }) => {
     }
 
     /**
+     * 添加分割线
+     */
+    seriesData.push({
+        name: '　',
+        value: 0,
+    });
+
+    highlightData.push({
+        name: '　',
+        value: 0,
+    });
+
+    /**
+     * 图例格式化
+     */
+    let legend = legendTools.align({
+        data: data,
+        isPercent: true, // 是否展示百分比
+        col: 3, // 展示几列
+        top: 'bottom', // 距离顶部
+        left: 100, // 距离左侧
+        space: 140, // 列间隔
+    });
+
+    /**
      * 导出配置项
      */
     let option = {
         tooltip: {
             trigger: 'item',
+            formatter: (param) => {
+                let res = '';
+                if (param.name.indexOf('border') === -1) {
+                    let item = data.filter((item) => item.name === param.name);
+
+                    if (item.length > 0) {
+                        res = `${param.name} : ${item[0].value}件`;
+                    }
+                }
+                return res;
+            },
         },
-        legend: {
-            top: '5%',
-            left: 'center',
-        },
+        legend: legend,
         series: [
             {
                 type: 'pie',
                 radius: [60, 90],
                 label: {
-                    show: false,
+                    show: true,
+                    position: 'center',
+                    formatter: (param) => {
+                        let res = '';
+                        if (param.name.indexOf('border') === -1) {
+                            res = `{name|${param.name}}`;
+                            res += `\n{value|${param.value}}件`;
+                        }
+                        return res;
+                    },
+                    rich: {
+                        name: {
+                            fontFamily: 'sans-serif',
+                            fontSize: 14,
+                            lineHeight: 21,
+                        },
+                        value: {
+                            fontFamily: 'unidreamLED',
+                            fontSize: 22,
+                            lineHeight: 33,
+                        },
+                    },
                 },
-                labelLine: {
+                emphasis: {
+                    scale: false,
+                },
+                itemStyle: {
+                    normal: {
+                        color: 'rgba(0, 0, 0, 0)',
+                    },
+                },
+                data: centerData,
+            },
+            {
+                type: 'pie',
+                radius: [60, 90],
+                label: {
                     show: false,
                 },
                 emphasis: {
@@ -103,16 +182,9 @@ export default ({ dom, param, opt }) => {
                 radius: [60, 90],
                 label: {
                     show: false,
-                    position: 'center',
-                },
-                labelLine: {
-                    show: false,
                 },
                 emphasis: {
-                    scaleSize: 20,
-                    label: {
-                        show: true,
-                    },
+                    scaleSize: 15,
                 },
                 data: highlightData,
             },
@@ -123,6 +195,11 @@ export default ({ dom, param, opt }) => {
      * 渲染
      */
     let echarts = $echarts.render(dom, option);
+
+    echarts.dispatchAction({
+        type: 'legendUnSelect',
+        name: '　',
+    });
 
     let lastName = '';
 
@@ -136,16 +213,16 @@ export default ({ dom, param, opt }) => {
 
         let nextName = names[names.indexOf(e.name) + 1];
 
-        let newNames = data.map((item) => item.name);
+        let newNames = percentData.map((item) => item.name);
 
-        data[newNames.indexOf(e.name)].selected = selected;
+        percentData[newNames.indexOf(e.name)].selected = selected;
 
         echarts.dispatchAction({
             type: selected ? 'legendSelect' : 'legendUnSelect',
             name: nextName,
         });
 
-        let selectedData = data.filter((item) => item.selected !== false);
+        let selectedData = percentData.filter((item) => item.selected !== false);
 
         if (selectedData.length === 2 && selected) {
             echarts.dispatchAction({

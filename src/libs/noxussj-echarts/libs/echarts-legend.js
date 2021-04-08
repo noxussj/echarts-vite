@@ -1,6 +1,5 @@
 /**
  * 垂直对齐方式
- * @func align
  * @param {Object} data 对象数组
  * @param {Boolean} isPercent 是否展示百分比
  * @param {Number} col 展示几列
@@ -12,6 +11,8 @@ const align = (param) => {
     // 数据定义
     let { data, isPercent, col, top, left, space } = param;
     let nameArr = data.map((item) => item.name); // 名称数组
+    let values = data.map((item) => item.value);
+    let total = values.reduce((a, b) => a + b);
     let res = [];
     let option = {
         show: true,
@@ -23,11 +24,31 @@ const align = (param) => {
         itemGap: 15,
         orient: 'vertical',
         textStyle: {
-            color: '#fff',
-            fontSize: 10,
+            color: '#000',
+            fontSize: 12,
+        },
+        formatter: (name) => {
+            let res = '';
+
+            let item = data.filter((item) => item.name === name);
+
+            if (item.length > 0) {
+                if (isPercent) {
+                    let percent = Number(((item[0].value / total) * 100).toFixed(2));
+
+                    res = `${item[0].name} ${percent}%`;
+                }
+                else{
+                    res = `${item[0].name}`;
+
+                }
+            } else {
+                res = '　';
+            }
+
+            return res;
         },
     };
-    let avg = Math.floor(nameArr.length / col); // 平均
     let row = Math.ceil(data.length / col); // 总行数
 
     // 遍历列数

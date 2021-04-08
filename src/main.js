@@ -7,6 +7,7 @@ const app = createApp(dom);
  */
 import './assets/css/reset.css';
 import './assets/css/base.css';
+import '../src/assets/css/font.less';
 
 /**
  * 导入插件
