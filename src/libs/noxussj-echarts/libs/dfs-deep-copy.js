@@ -1,5 +1,7 @@
-// 深度优先遍历
-let dfs = data => {
+/**
+ * 深拷贝
+ */
+let dfs = (data) => {
     let newData;
 
     if (type(data) === 'array') {
@@ -9,7 +11,7 @@ let dfs = data => {
         });
     } else if (type(data) === 'object') {
         newData = {};
-        Object.keys(data).map(item => {
+        Object.keys(data).map((item) => {
             newData[item] = dfs(data[item]);
         });
     } else {
@@ -19,8 +21,10 @@ let dfs = data => {
     return newData;
 };
 
-// 类型字典
-export let type = data => {
+/**
+ * 类型字典
+ */
+export let type = (data) => {
     let dist = {
         '[object Array]': 'array',
         '[object Object]': 'object',
@@ -28,7 +32,7 @@ export let type = data => {
         '[object Function]': 'function',
         '[object String]': 'string',
         '[object Null]': 'null',
-        '[object Undefined]': 'undefined'
+        '[object Undefined]': 'undefined',
     };
 
     return dist[Object.prototype.toString.call(data)];

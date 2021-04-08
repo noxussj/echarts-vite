@@ -1,3 +1,5 @@
+// 待优化代码
+
 /**
  * 垂直对齐方式
  * @param {Object} data 对象数组
@@ -93,7 +95,6 @@ let align = (param) => {
 
 /**
  * 返回对应的下标
- * @func getIndex
  * @param {Number} col 总列数（固定）
  * @param {Number} colIndex 当前列数（变量）
  * @param {Number} rowIndex 当前行数（变量）

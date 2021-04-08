@@ -1,21 +1,4 @@
-// 类型字典
-let type = (data) => {
-    try {
-        let dist = {
-            '[object Array]': 'array',
-            '[object Object]': 'object',
-            '[object Number]': 'number',
-            '[object Function]': 'function',
-            '[object String]': 'string',
-            '[object Null]': 'null',
-            '[object Undefined]': 'undefined',
-        };
-
-        return dist[Object.prototype.toString.call(data)];
-    } catch (error) {
-        console.log('error', error);
-    }
-};
+import { type } from './dfs-deep-copy.js';
 
 /**
  * 对象多层合并

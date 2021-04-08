@@ -25,11 +25,8 @@ class EchartsExtens {
         }
     }
 
-    /**
-     * 继承
-     */
     _extens(FirstOBJ, SecondOBJ) {
-        let filterKeys = ['data', 'radius', 'center', 'color'];
+        let filterKeys = ['data', 'radius', 'center', 'color']; // 过滤keys
 
         let newOBJ = dfsDeepCopy(SecondOBJ);
 
