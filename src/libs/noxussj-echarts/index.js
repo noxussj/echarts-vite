@@ -9,7 +9,7 @@ class Echarts {
      * 继承父级图表配置项
      */
     async extens(echartsName, param) {
-        let keys = ['pie', 'line'];
+        let keys = ['pie', 'line', 'barx'];
 
         let key = '';
 

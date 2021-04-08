@@ -4,7 +4,9 @@
         <div class="chart-panel">
             <!-- <pie-annular></pie-annular> -->
 
-            <line-simple></line-simple>
+            <!-- <line-simple></line-simple> -->
+
+            <barx-simple></barx-simple>
         </div>
     </div>
 </template>
@@ -12,11 +14,13 @@
 <script>
 import PieAnnular from '../components/echarts/pie/pie-annular.vue';
 import LineSimple from '../components/echarts/line/line-simple.vue';
+import BarxSimple from '../components/echarts/barx/barx-simple.vue';
 
 export default {
     components: {
         PieAnnular,
         LineSimple,
+        BarxSimple,
     },
     mounted() {},
 };
