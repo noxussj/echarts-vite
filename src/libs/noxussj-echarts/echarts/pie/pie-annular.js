@@ -105,8 +105,8 @@ export default ({ dom, param, opt }) => {
         isPercent: true, // 是否展示百分比
         col: 3, // 展示几列
         top: 'bottom', // 距离顶部
-        left: 100, // 距离左侧
-        space: 140, // 列间隔
+        left: 110, // 距离左侧
+        space: 130, // 列间隔
     });
 
     /**
