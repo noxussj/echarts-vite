@@ -1,5 +1,5 @@
 import * as Echarts from 'echarts';
-import { use, $echarts } from '../noxussj-echarts/index.js';
+import { use, $echarts } from 'noxussj-echarts';
 
 export default (app) => {
     use(Echarts);

@@ -1,12 +1,12 @@
 <template>
     <div class="views__home">
-        <!-- <div class="chart-panel">
-            <pie-annular></pie-annular>
-        </div> -->
-
         <div class="chart-panel">
-            <barx-simple></barx-simple>
+            <pie-annular></pie-annular>
         </div>
+
+        <!-- <div class="chart-panel">
+            <barx-simple></barx-simple>
+        </div> -->
 
         <!-- <div class="chart-panel">
             <line-simple></line-simple>
