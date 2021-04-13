@@ -14,20 +14,6 @@
     </div>
 </template>
 
-<script>
-import PieAnnular from '../components/echarts/pie/pie-annular.vue';
-import LineSimple from '../components/echarts/line/line-simple.vue';
-import BarxSimple from '../components/echarts/barx/barx-simple.vue';
-
-export default {
-    components: {
-        PieAnnular,
-        LineSimple,
-        BarxSimple,
-    },
-    mounted() {},
-};
-</script>
 
 <style lang="less" scoped>
 .views__home {

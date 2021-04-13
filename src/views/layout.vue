@@ -1,0 +1,66 @@
+<template>
+    <div class="views__layout">
+        <to-layout :orient="'vertical'">
+            <model :width="'100%'" :height="'33%'" :orient="'horizontal'">
+                <sub-model :width="'25%'" :height="'100%'" title="pieAnnular">
+                    <div class="to__block">
+                        <pie-annular></pie-annular>
+                    </div>
+                </sub-model>
+                <sub-model :width="'25%'" :height="'100%'" title="lineSimple">
+                    <div class="to__block">
+                        <line-simple></line-simple>
+                    </div>
+                </sub-model>
+                <sub-model :width="'25%'" :height="'100%'" title="barxSimple">
+                    <div class="to__block">
+                        <barx-simple></barx-simple>
+                    </div>
+                </sub-model>
+                <sub-model :width="'25%'" :height="'100%'">
+                    <div class="to__block">A4</div>
+                </sub-model>
+            </model>
+            <model :width="'100%'" :height="'33%'" :orient="'horizontal'">
+                <sub-model :width="'25%'" :height="'100%'">
+                    <div class="to__block">B1</div>
+                </sub-model>
+                <sub-model :width="'25%'" :height="'100%'">
+                    <div class="to__block">B2</div>
+                </sub-model>
+                <sub-model :width="'25%'" :height="'100%'">
+                    <div class="to__block">B3</div>
+                </sub-model>
+                <sub-model :width="'25%'" :height="'100%'">
+                    <div class="to__block">B4</div>
+                </sub-model>
+            </model>
+            <model :width="'100%'" :height="'34%'" :orient="'horizontal'">
+                <sub-model :width="'25%'" :height="'100%'">
+                    <div class="to__block">C1</div>
+                </sub-model>
+                <sub-model :width="'25%'" :height="'100%'">
+                    <div class="to__block">C2</div>
+                </sub-model>
+                <sub-model :width="'25%'" :height="'100%'">
+                    <div class="to__block">C3</div>
+                </sub-model>
+                <sub-model :width="'25%'" :height="'100%'">
+                    <div class="to__block">C4</div>
+                </sub-model>
+            </model>
+        </to-layout>
+    </div>
+</template>
+
+<style lang="less" scoped>
+.views__layout {
+    height: 100%;
+
+    .to__block {
+        height: 100%;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 4px;
+    }
+}
+</style>

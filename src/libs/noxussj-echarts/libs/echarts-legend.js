@@ -5,7 +5,7 @@ let align = (param) => {
     /**
      * 参数接收
      */
-    let { data, isPercent, col, top, left, space } = param;
+    let { data, isPercent, col, top, left, bottom, space } = param;
 
     /**
      * 补空位
@@ -32,13 +32,14 @@ let align = (param) => {
         legend.push({
             show: true,
             top: top,
+            bottom: bottom,
             icon: 'circle',
             itemWidth: 5,
             itemHeight: 5,
             itemGap: 15,
             orient: 'vertical',
             textStyle: {
-                color: '#000',
+                color: '#fff',
                 fontSize: 12,
             },
             formatter: (name) => {

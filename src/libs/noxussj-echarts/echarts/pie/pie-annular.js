@@ -1,9 +1,16 @@
 import { $echarts } from '../../index.js';
-import color from '../../libs/color.js';
+import { $color } from '../../libs/echarts-style.js';
 import legendTools from '../../libs/echarts-legend.js';
 
 export default ({ dom, param, opt }) => {
     let { data } = param;
+
+    /**
+     * 对外参数
+     */
+
+    let radius = [40, 60];
+    let center = ['center', 120];
 
     /**
      * 数据转换百分比
@@ -27,7 +34,7 @@ export default ({ dom, param, opt }) => {
             name: item.name,
             value: item.value,
             itemStyle: {
-                color: color[index],
+                color: $color.theme[index],
             },
         });
     });
@@ -44,7 +51,7 @@ export default ({ dom, param, opt }) => {
             itemStyle: {
                 color: 'rgba(0, 0, 0, 0)',
                 emphasis: {
-                    color: color[index].replace(/(\d+)(\))/g, `${0.3}$2`),
+                    color: $color.theme[index].replace(/(\d+)(\))/g, `${0.5}$2`),
                 },
             },
         });
@@ -104,8 +111,8 @@ export default ({ dom, param, opt }) => {
         data: data,
         isPercent: true, // 是否展示百分比
         col: 3, // 展示几列
-        top: 'bottom', // 距离顶部
-        left: 110, // 距离左侧
+        bottom: 20, // 距离底部
+        left: 50, // 距离左侧
         space: 130, // 列间隔
     });
 
@@ -131,10 +138,12 @@ export default ({ dom, param, opt }) => {
         series: [
             {
                 type: 'pie',
-                radius: [60, 90],
+                center: center,
+                radius: radius,
                 label: {
                     show: true,
                     position: 'center',
+                    color: '#fff',
                     formatter: (param) => {
                         let res = '';
                         if (param.name.indexOf('border') === -1) {
@@ -168,7 +177,8 @@ export default ({ dom, param, opt }) => {
             },
             {
                 type: 'pie',
-                radius: [60, 90],
+                center: center,
+                radius: radius,
                 label: {
                     show: false,
                 },
@@ -179,7 +189,8 @@ export default ({ dom, param, opt }) => {
             },
             {
                 type: 'pie',
-                radius: [60, 90],
+                center: center,
+                radius: radius,
                 label: {
                     show: false,
                 },
@@ -194,7 +205,9 @@ export default ({ dom, param, opt }) => {
     /**
      * 渲染
      */
-    let echarts = $echarts.render(dom, option);
+    let extensOption = $echarts.extens(opt, option);
+
+    let echarts = $echarts.render(dom, extensOption);
 
     echarts.dispatchAction({
         type: 'legendUnSelect',

@@ -1,0 +1,86 @@
+@space: 20px;
+
+// layout 布局方向
+.to__block__layout.vertical {
+    flex-direction: column;
+}
+
+// model 布局方向
+.to__block__model.vertical {
+    .model-content {
+        flex-direction: column;
+    }
+}
+
+// model 模块间隔
+.to__block__layout.horizontal {
+    .to__block__model {
+        margin: 0 calc(@space / 2);
+    }
+
+    .to__block__model:first-child {
+        margin-left: 0;
+    }
+
+    .to__block__model:last-child {
+        margin-right: 0;
+    }
+}
+
+.to__block__layout.vertical {
+    .to__block__model {
+        margin: calc(@space / 2) 0;
+    }
+
+    .to__block__model:first-child {
+        margin-top: 0;
+    }
+
+    .to__block__model:last-child {
+        margin-bottom: 0;
+    }
+}
+
+// sub-model 模块间隔
+.to__block__model.horizontal {
+    .to__block__sub-model {
+        margin: 0 calc(@space / 2);
+    }
+
+    .to__block__sub-model:first-child {
+        margin-left: 0;
+    }
+
+    .to__block__sub-model:last-child {
+        margin-right: 0;
+    }
+}
+
+.to__block__model.vertical {
+    .to__block__sub-model {
+        margin: calc(@space / 2) 0;
+    }
+
+    .to__block__sub-model:first-child {
+        margin-top: 0;
+    }
+
+    .to__block__sub-model:last-child {
+        margin-bottom: 0;
+    }
+}
+
+// 暂无数据提示
+.no-data {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.no-data::before {
+    content: '暂无数据';
+    font-size: 12px;
+    height: 12px;
+    line-height: 12px;
+}

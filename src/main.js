@@ -7,6 +7,7 @@ const app = createApp(dom);
  */
 import './assets/css/reset.css';
 import './assets/css/base.css';
+import '../src/assets/css/layout.less';
 import '../src/assets/css/font.less';
 
 /**
@@ -34,6 +35,14 @@ elementPlus(app);
 import echarts from './libs/import/echarts.js';
 
 echarts(app);
+
+/**
+ * 全局组件
+ */
+
+import globalComponents from './components/global.js';
+
+globalComponents(app);
 
 /**
  * 完成路由后挂载到dom

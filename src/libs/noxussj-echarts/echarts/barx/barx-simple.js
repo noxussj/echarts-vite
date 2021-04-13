@@ -1,5 +1,5 @@
 import { $echarts } from '../../index.js';
-import color from '../../libs/color.js';
+import { $color, $grid } from '../../libs/echarts-style.js';
 
 export default ({ dom, param, opt }) => {
     let { data } = param;
@@ -27,19 +27,51 @@ export default ({ dom, param, opt }) => {
      * 导出配置项
      */
     let option = {
-        color: color,
+        color: $color.theme,
+        grid: $grid,
         tooltip: {
             trigger: 'axis',
             axisPointer: {
                 type: 'shadow',
             },
         },
+        legend: {
+            icon: 'rect',
+            top: 10,
+            right: 20,
+            itemWidth: 10,
+            itemHeight: 3,
+            itemGap: 15,
+            textStyle: {
+                color: '#fff',
+                fontSize: 12,
+            },
+        },
         xAxis: {
             type: 'category',
             data: xAxisData,
+            axisTick: {
+                show: false,
+            },
+            axisLabel: {
+                color: $color.xAxisLabel,
+            },
+            axisLine: {
+                lineStyle: {
+                    color: $color.xAxisLine,
+                },
+            },
         },
         yAxis: {
             type: 'value',
+            axisLabel: {
+                color: $color.yAxisLabel,
+            },
+            splitLine: {
+                lineStyle: {
+                    color: $color.yAxisLine,
+                },
+            },
         },
         series: seriesData,
     };

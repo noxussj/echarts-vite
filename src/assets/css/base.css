@@ -4,18 +4,17 @@ html {
 
 body {
     height: 100%;
+    font-size: 14px;
+    color: #fff;
+    background-color: #000;
 }
 
 body #root {
     height: 100%;
 }
 
-.dg.main.a {
-    position: absolute;
-    float: none;
-    top: 15px;
-    right: 15px;
-    margin-right: 0;
+div {
+    box-sizing: border-box;
 }
 
 .echarts-dom {
