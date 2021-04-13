@@ -21,10 +21,6 @@ import store from './store/index.js';
 
 app.use(store);
 
-import less from 'less';
-
-app.use(less);
-
 /**
  * 导入第三方框架
  */

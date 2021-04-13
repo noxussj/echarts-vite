@@ -1,25 +1,28 @@
 {
-  "name": "echarts-vite",
-  "version": "0.0.0",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build --base=./"
-  },
-  "dependencies": {
-    "@vitejs/plugin-vue": "^1.0.4",
-    "@vue/compiler-sfc": "^3.0.5",
-    "echarts": "^5.0.2",
-    "less": "^4.1.1",
-    "less-loader": "^8.0.0",
-    "noxussj-ajax": "^1.0.1",
-    "noxussj-echarts": "^1.0.3",
-    "vite": "^2.0.0-beta.12",
-    "vite-plugin-imp": "^2.0.4",
-    "vuex": "^4.0.0"
-  },
-  "devDependencies": {
-    "vue": "^3.0.5",
-    "vue-router": "^4.0.5",
-    "element-plus": "^1.0.2-beta.35"
-  }
+    "name": "echarts-vite",
+    "version": "0.0.0",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build --base=./",
+        "upload": "node ./gulpfile.js"
+    },
+    "dependencies": {
+        "@vitejs/plugin-vue": "^1.0.4",
+        "@vue/compiler-sfc": "^3.0.5",
+        "echarts": "^5.0.2",
+        "gulp": "^4.0.2",
+        "gulp-sftp-up5": "^0.0.10",
+        "less": "^4.1.1",
+        "less-loader": "^8.0.0",
+        "noxussj-ajax": "^1.0.1",
+        "noxussj-echarts": "^1.0.3",
+        "vite": "^2.0.0-beta.12",
+        "vite-plugin-imp": "^2.0.4",
+        "vuex": "^4.0.0"
+    },
+    "devDependencies": {
+        "vue": "^3.0.5",
+        "vue-router": "^4.0.5",
+        "element-plus": "^1.0.2-beta.35"
+    }
 }
