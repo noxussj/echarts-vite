@@ -18,7 +18,9 @@
                     </div>
                 </sub-model>
                 <sub-model :width="'25%'" :height="'100%'">
-                    <div class="to__block">A4</div>
+                    <div class="to__block">
+                        <pie-liquidfill></pie-liquidfill>
+                    </div>
                 </sub-model>
             </model>
             <model :width="'100%'" :height="'33%'" :orient="'horizontal'">

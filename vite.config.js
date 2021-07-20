@@ -7,6 +7,7 @@ import vitePluginImp from 'vite-plugin-imp';
 export default {
     server: {
         hmr: false, // 关闭热更新
+        port: 3002,
     },
     plugins: [
         vue(),
