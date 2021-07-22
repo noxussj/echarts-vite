@@ -7,6 +7,7 @@ import PieLiquidfill from './echarts/pie/pie-liquidfill.vue';
 import PiePolar from './echarts/pie/pie-polar.vue';
 import LineSimple from './echarts/line/line-simple.vue';
 import BarxSimple from './echarts/barx/barx-simple.vue';
+import BarxClass from './echarts/barx/barx-class.vue';
 
 /**
  * 全局组件
@@ -23,4 +24,5 @@ export default (app) => {
     app.component('PiePolar', PiePolar);
     app.component('LineSimple', LineSimple);
     app.component('BarxSimple', BarxSimple);
+    app.component('BarxClass', BarxClass);
 };

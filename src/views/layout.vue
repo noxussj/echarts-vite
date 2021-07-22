@@ -17,23 +17,25 @@
                         <barx-simple></barx-simple>
                     </div>
                 </sub-model>
-                <sub-model :width="'25%'" :height="'100%'">
+                <sub-model :width="'25%'" :height="'100%'" title="pieLiquidfill">
                     <div class="to__block">
                         <pie-liquidfill></pie-liquidfill>
                     </div>
                 </sub-model>
             </model>
             <model :width="'100%'" :height="'33%'" :orient="'horizontal'">
-                <sub-model :width="'25%'" :height="'100%'">
+                <sub-model :width="'25%'" :height="'100%'" title="piePolar">
                     <div class="to__block">
                         <pie-polar></pie-polar>
                     </div>
                 </sub-model>
                 <sub-model :width="'25%'" :height="'100%'">
-                    <div class="to__block">B2</div>
-                </sub-model>
-                <sub-model :width="'25%'" :height="'100%'">
                     <div class="to__block">B3</div>
+                </sub-model>
+                <sub-model :width="'25%'" :height="'100%'" title="barxClass">
+                    <div class="to__block">
+                        <barx-class></barx-class>
+                    </div>
                 </sub-model>
                 <sub-model :width="'25%'" :height="'100%'">
                     <div class="to__block">B4</div>
