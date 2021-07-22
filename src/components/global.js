@@ -8,6 +8,8 @@ import PiePolar from './echarts/pie/pie-polar.vue';
 import LineSimple from './echarts/line/line-simple.vue';
 import BarxSimple from './echarts/barx/barx-simple.vue';
 import BarxClass from './echarts/barx/barx-class.vue';
+import BarxColor from './echarts/barx/barx-color.vue';
+import BarxMultiple from './echarts/barx/barx-multiple.vue';
 
 /**
  * 全局组件
@@ -25,4 +27,6 @@ export default (app) => {
     app.component('LineSimple', LineSimple);
     app.component('BarxSimple', BarxSimple);
     app.component('BarxClass', BarxClass);
+    app.component('BarxColor', BarxColor);
+    app.component('BarxMultiple', BarxMultiple);
 };

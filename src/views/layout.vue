@@ -29,16 +29,20 @@
                         <pie-polar></pie-polar>
                     </div>
                 </sub-model>
-                <sub-model :width="'25%'" :height="'100%'">
-                    <div class="to__block">B3</div>
+                <sub-model :width="'25%'" :height="'100%'" title="barxColor">
+                    <div class="to__block">
+                        <barx-color></barx-color>
+                    </div>
                 </sub-model>
                 <sub-model :width="'25%'" :height="'100%'" title="barxClass">
                     <div class="to__block">
                         <barx-class></barx-class>
                     </div>
                 </sub-model>
-                <sub-model :width="'25%'" :height="'100%'">
-                    <div class="to__block">B4</div>
+                <sub-model :width="'25%'" :height="'100%'" title="barxMultiple">
+                    <div class="to__block">
+                        <barx-multiple></barx-multiple>
+                    </div>
                 </sub-model>
             </model>
             <model :width="'100%'" :height="'34%'" :orient="'horizontal'">
