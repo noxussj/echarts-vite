@@ -10,6 +10,7 @@ import BarxSimple from './echarts/barx/barx-simple.vue';
 import BarxClass from './echarts/barx/barx-class.vue';
 import BarxColor from './echarts/barx/barx-color.vue';
 import BarxMultiple from './echarts/barx/barx-multiple.vue';
+import WordCloudSimple from './echarts/word-cloud/word-cloud-simple.vue';
 
 /**
  * 全局组件
@@ -29,4 +30,5 @@ export default (app) => {
     app.component('BarxClass', BarxClass);
     app.component('BarxColor', BarxColor);
     app.component('BarxMultiple', BarxMultiple);
+    app.component('WordCloudSimple', WordCloudSimple);
 };

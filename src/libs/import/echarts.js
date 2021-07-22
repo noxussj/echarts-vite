@@ -15,6 +15,7 @@ import 'echarts/lib/component/grid';
  * 引用扩展库
  */
 import 'echarts-liquidfill';
+import 'echarts-wordcloud';
 
 import { use, $echarts } from 'noxussj-echarts';
 

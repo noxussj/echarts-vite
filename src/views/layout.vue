@@ -39,9 +39,9 @@
                         <barx-class></barx-class>
                     </div>
                 </sub-model>
-                <sub-model :width="'25%'" :height="'100%'" title="barxMultiple">
+                <sub-model :width="'25%'" :height="'100%'" title="wordCloudSimple">
                     <div class="to__block">
-                        <barx-multiple></barx-multiple>
+                        <word-cloud-simple></word-cloud-simple>
                     </div>
                 </sub-model>
             </model>
@@ -52,8 +52,10 @@
                 <sub-model :width="'25%'" :height="'100%'">
                     <div class="to__block">C2</div>
                 </sub-model>
-                <sub-model :width="'25%'" :height="'100%'">
-                    <div class="to__block">C3</div>
+                <sub-model :width="'25%'" :height="'100%'" title="barxMultiple">
+                    <div class="to__block">
+                        <barx-multiple></barx-multiple>
+                    </div>
                 </sub-model>
                 <sub-model :width="'25%'" :height="'100%'">
                     <div class="to__block">C4</div>
