@@ -1,4 +1,4 @@
-# Example
+# Usage
 
 <b>注入 echarts</b>
 

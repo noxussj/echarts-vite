@@ -57,8 +57,10 @@
                         <barx-multiple></barx-multiple>
                     </div>
                 </sub-model>
-                <sub-model :width="'25%'" :height="'100%'">
-                    <div class="to__block">C4</div>
+                <sub-model :width="'25%'" :height="'100%'" title="radarBlock">
+                    <div class="to__block">
+                        <radar-block></radar-block>
+                    </div>
                 </sub-model>
             </model>
         </to-layout>
