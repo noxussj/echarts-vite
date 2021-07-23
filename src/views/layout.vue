@@ -29,9 +29,9 @@
                         <pie-polar></pie-polar>
                     </div>
                 </sub-model>
-                <sub-model :width="'25%'" :height="'100%'" title="barxColor">
+                <sub-model :width="'25%'" :height="'100%'" title="lineSplit">
                     <div class="to__block">
-                        <barx-color></barx-color>
+                        <line-split></line-split>
                     </div>
                 </sub-model>
                 <sub-model :width="'25%'" :height="'100%'" title="barxClass">
@@ -46,8 +46,10 @@
                 </sub-model>
             </model>
             <model :width="'100%'" :height="'34%'" :orient="'horizontal'">
-                <sub-model :width="'25%'" :height="'100%'">
-                    <div class="to__block">C1</div>
+                <sub-model :width="'25%'" :height="'100%'" title="barxColor">
+                    <div class="to__block">
+                        <barx-color></barx-color>
+                    </div>
                 </sub-model>
                 <sub-model :width="'25%'" :height="'100%'">
                     <div class="to__block">C2</div>

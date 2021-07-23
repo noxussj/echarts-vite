@@ -6,6 +6,7 @@ import PieAnnular from './echarts/pie/pie-annular.vue';
 import PieLiquidfill from './echarts/pie/pie-liquidfill.vue';
 import PiePolar from './echarts/pie/pie-polar.vue';
 import LineSimple from './echarts/line/line-simple.vue';
+import LineSplit from './echarts/line/line-split.vue';
 import BarxSimple from './echarts/barx/barx-simple.vue';
 import BarxClass from './echarts/barx/barx-class.vue';
 import BarxColor from './echarts/barx/barx-color.vue';
@@ -27,6 +28,7 @@ export default (app) => {
     app.component('PieLiquidfill', PieLiquidfill);
     app.component('PiePolar', PiePolar);
     app.component('LineSimple', LineSimple);
+    app.component('LineSplit', LineSplit);
     app.component('BarxSimple', BarxSimple);
     app.component('BarxClass', BarxClass);
     app.component('BarxColor', BarxColor);
