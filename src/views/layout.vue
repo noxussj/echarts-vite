@@ -51,8 +51,10 @@
                         <barx-color></barx-color>
                     </div>
                 </sub-model>
-                <sub-model :width="'25%'" :height="'100%'">
-                    <div class="to__block">C2</div>
+                <sub-model :width="'25%'" :height="'100%'" title="baryGlow">
+                    <div class="to__block">
+                        <bary-glow></bary-glow>
+                    </div>
                 </sub-model>
                 <sub-model :width="'25%'" :height="'100%'" title="barxMultiple">
                     <div class="to__block">
