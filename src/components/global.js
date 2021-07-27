@@ -9,8 +9,6 @@ import LineSimple from './echarts/line/line-simple.vue';
 import LineSplit from './echarts/line/line-split.vue';
 import BarxSimple from './echarts/barx/barx-simple.vue';
 import BarxClass from './echarts/barx/barx-class.vue';
-import BarxColor from './echarts/barx/barx-color.vue';
-import BaryGlow from './echarts/bary/bary-glow.vue';
 import BarxMultiple from './echarts/barx/barx-multiple.vue';
 import WordCloudSimple from './echarts/word-cloud/word-cloud-simple.vue';
 import RadarBlock from './echarts/radar/radar-block.vue';
@@ -32,8 +30,6 @@ export default (app) => {
     app.component('LineSplit', LineSplit);
     app.component('BarxSimple', BarxSimple);
     app.component('BarxClass', BarxClass);
-    app.component('BarxColor', BarxColor);
-    app.component('BaryGlow', BaryGlow);
     app.component('BarxMultiple', BarxMultiple);
     app.component('WordCloudSimple', WordCloudSimple);
     app.component('RadarBlock', RadarBlock);
