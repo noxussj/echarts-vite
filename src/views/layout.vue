@@ -56,9 +56,9 @@
                         <barx-class></barx-class>
                     </div>
                 </sub-model>
-                <sub-model :width="'25%'" :height="'100%'">
+                <sub-model :width="'25%'" :height="'100%'" title="scatterSimple">
                     <div class="to__block">
-                        C3
+                        <scatter-simple></scatter-simple>
                     </div>
                 </sub-model>
                 <sub-model :width="'25%'" :height="'100%'">
