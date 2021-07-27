@@ -23,6 +23,9 @@ export default {
             dom: this.$refs.echart,
             param: {
                 data: data,
+                // color: ['rgba(255, 0, 0, 1)', 'rgba(0, 255, 0, 1)'], // 插拔式开关（颜色）
+                // isAreaColor: true, // 插拔式开关（是否开启区域渐变）
+                // isSmooth: true, // 插拔式开关（是否开启曲线）
             },
             opt: {},
         });

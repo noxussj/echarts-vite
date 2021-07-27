@@ -25,6 +25,7 @@ export default {
             dom: this.$refs.echart,
             param: {
                 data: data,
+                // color: ['rgba(168, 39, 255, 1)', 'rgba(11, 80, 255, 1)'], // 插拔式开关（颜色）
             },
             opt: {},
         });
