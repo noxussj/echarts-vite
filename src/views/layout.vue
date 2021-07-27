@@ -61,9 +61,9 @@
                         <scatter-simple></scatter-simple>
                     </div>
                 </sub-model>
-                <sub-model :width="'25%'" :height="'100%'">
+                <sub-model :width="'25%'" :height="'100%'" title="heatmapSimple">
                     <div class="to__block">
-                        C4
+                        <heatmap-simple></heatmap-simple>
                     </div>
                 </sub-model>
             </model>
