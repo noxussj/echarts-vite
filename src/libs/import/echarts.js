@@ -17,7 +17,7 @@ import 'echarts/lib/component/grid';
 import 'echarts-liquidfill';
 import 'echarts-wordcloud';
 
-import { use, $echarts } from 'noxussj-echarts';
+import { use, $echarts } from 'ns-echarts';
 
 export default (app) => {
     use(Echarts);
